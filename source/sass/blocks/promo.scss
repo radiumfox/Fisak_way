@@ -1,0 +1,39 @@
+.promo {
+  background-image: url("../img/promo-bg-mobile.jpg");
+  min-height: 235px;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/promo-bg-tablet.jpg");
+    min-height: 344px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/promo-bg-desktop.jpg");
+    background-position-x: 40%;
+    min-height: 860px;
+  }
+}
+
+.promo__title {
+  color: $basic-lightest;
+  @include font(24px, 36px, 600);
+
+  @media (min-width: $tablet-width) {
+    @include font(30px, 45px, 600);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(55px, 80px, 600);
+  }
+}
+
+.promo__text {
+  color: $basic-dark;
+  @include font(16px, 27px, 400);
+
+  @media (min-width: $tablet-width) {
+    color: $basic-lightest;
+    @include font(16px, 27px, 400);
+  }
+}

@@ -1,0 +1,30 @@
+.places__wrapper {
+  @media (min-width: $desktop-width) {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+.places__main-title {
+  @include font(24px, 36px, 600);
+
+  @media (min-width: $tablet-width) {
+    @include font(30px, 45px, 600);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(55px, 80px, 600);
+  }
+}
+
+.places__text {
+  @include font(16px, 28px, 400);
+}
+
+.places__title {
+  @include font(24px, 29px, 500);
+}
+
+.places__list {
+  @include reset-list;
+}

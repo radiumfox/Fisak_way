@@ -1,0 +1,32 @@
+.main-nav__list {
+  @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav__item {
+  &--phone {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+  }
+}
+
+.main-nav__link {
+  color: $basic-darkest;
+  text-decoration: none;
+
+  &--underline {
+    text-decoration: underline;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(14px, 17px, 500);
+  }
+}

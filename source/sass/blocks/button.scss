@@ -1,0 +1,10 @@
+.button {
+  text-transform: uppercase;
+  color: $basic-lightest;
+  text-decoration: none;
+  @include font(10px, 12px, 500);
+
+  @media (min-width: $desktop-width) {
+    @include font(12px, 15px, 700);
+  }
+}

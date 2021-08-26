@@ -1,0 +1,18 @@
+.request__wrapper {
+  @media (min-width: $desktop-width) {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+.request__text {
+  @include font(25px, 32px, 600);
+}
+
+.request__offer {
+  @include font(16px, 24px, 400);
+}
+
+.request__control {
+  @include placeholder;
+}

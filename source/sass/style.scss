@@ -1,0 +1,23 @@
+// global
+
+@import "global/normalize.scss";
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/mixins.scss";
+@import "global/global.scss";
+
+// blocks
+
+@import "blocks/page.scss";
+@import "blocks/page-body.scss";
+@import "blocks/button.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+
+@import "blocks/promo.scss";
+@import "blocks/places.scss";
+@import "blocks/info.scss";
+@import "blocks/pricing.scss";
+@import "blocks/request.scss";
+
+@import "blocks/page-footer.scss";

@@ -1,0 +1,18 @@
+// - мобильная версия — 320px - 767px;
+// - планшетная версия — 768px - 1023px;
+// - десктопная версия — от 1024px и выше
+
+// viewports
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$mobile-width-only: 767px;
+
+// colors
+
+$basic-light: #FBF8F8;
+$basic-lightest: #FFFFFF;
+$accent-primary: #FE7865;
+$accent-hover: #F17D4B;
+$basic-dark: #2C2E3F;
+$basic-darkest: #141517;

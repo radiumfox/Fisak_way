@@ -1,0 +1,80 @@
+.pricing__wrapper {
+  @media (min-width: $desktop-width) {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+.pricing__info-title {
+  @include font(24px, 36px, 600);
+
+  @media (min-width: $tablet-width) {
+    @include font(30px, 45px, 600);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(55px, 90px, 600);
+  }
+}
+
+.pricing__info-text {
+  @include font(16px, 27px, 400);
+  color: rgba($basic-dark, 0.7);
+}
+
+.pricing__contacts-text {
+  @include font(18px, 34px, 500);
+  color: $basic-darkest;
+
+  @media (min-width: $desktop-width) {
+    @include font(22px, 34px, 500);
+  }
+}
+
+.pricing__phone {
+  @include font(18px, 32px, 400);
+  color: $accent-primary;
+
+  @media (min-width: $tablet-width) {
+    @include font(16px, 32px, 400);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(20px, 32px, 400);
+    color: $basic-darkest;
+  }
+}
+
+.pricing__list {
+  @include reset-list;
+}
+
+.pricing__item {
+  border: 1px solid rgba($basic-dark, 0.3);
+  border-radius: 6px;
+
+  &--active {
+    border: 3px solid $accent-primary;
+  }
+}
+
+.pricing__title {
+  @include font(24px, 34px, 600);
+  color: rgba($basic-darkest, 0.7);
+}
+
+.pricing__item--active .pricing__title {
+  color: $accent-primary;
+}
+
+.pricing__price {
+  @include font(25px, 34px, 700);
+}
+
+.pricing__text {
+  @include font(16px, 24px, 400);
+}
+
+.pricing__feature {
+  @include font(16px, 32px, 400);
+}

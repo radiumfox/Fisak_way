@@ -1,0 +1,59 @@
+.info__wrapper {
+  @media (min-width: $desktop-width) {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+.info__tabs-list {
+  @include reset-list;
+}
+
+.info__tab-link {
+  @include font(20px, 24px, 500);
+  color: rgba($basic-dark, 0.3);
+  text-decoration: none;
+
+  &--active {
+    color: $accent-primary;
+  }
+}
+
+.info__country-list {
+  @include reset-list;
+}
+
+.info__country-name {
+  @include font(24px, 36px, 600);
+
+  @media (min-width: $tablet-width) {
+    @include font(30px, 45px, 600);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(55px, 90px, 600);
+  }
+}
+
+.info__text {
+  @include font(16px, 28px, 400);
+  color: rgba($basic-dark, 0.7);
+}
+
+.info__reviews-title {
+  @include font(20px, 24px, 500);
+
+  @media (min-width: $tablet-width) {
+    @include font(30px, 36px, 500);
+  }
+}
+
+.info__review-text {
+  @include font(14px, 28px, 400);
+  color: rgba($basic-dark, 0.7);
+}
+
+.info__review-author {
+  @include font(16px, 20px, 500);
+  font-style: normal;
+}
