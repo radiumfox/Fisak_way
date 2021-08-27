@@ -1,12 +1,38 @@
 .pricing__wrapper {
+  padding: 0 16px;
+  margin-bottom: 100px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+    margin-bottom: 110px;
+  }
+
   @media (min-width: $desktop-width) {
     max-width: 1170px;
-    margin: 0 auto;
+    margin: 0 auto 140px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+.pricing__info {
+  text-align: center;
+  padding-bottom: 40px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+    padding-left: 20px;
+    order: 3;
+    width: 306px;
+    text-align: left;
   }
 }
 
 .pricing__info-title {
   @include font(24px, 36px, 600);
+  margin: 0;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     @include font(30px, 45px, 600);
@@ -14,20 +40,64 @@
 
   @media (min-width: $desktop-width) {
     @include font(55px, 90px, 600);
+    margin-bottom: 30px;
   }
 }
 
 .pricing__info-text {
   @include font(16px, 27px, 400);
   color: rgba($basic-dark, 0.7);
+  margin: 0;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 60px;
+  }
 }
 
 .pricing__contacts-text {
   @include font(18px, 34px, 500);
   color: $basic-darkest;
+  margin: 0;
+  padding-bottom: 10px;
+
 
   @media (min-width: $desktop-width) {
     @include font(22px, 34px, 500);
+
+  }
+}
+
+.pricing__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing__contact {
+  @include font(14px, 17px, 400);
+  color: $accent-primary;
+
+  @media (min-width: $tablet-width) {
+    @include font(16px, 32px, 400);
+  }
+
+  &--email {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--phone {
+    @include font(16px, 32px, 400);
+    @media (min-width: $desktop-width) {
+      @include font(20px, 32px, 400);
+      color: $basic-darkest;
+      padding-left: 50px;
+    }
   }
 }
 
@@ -42,30 +112,103 @@
   @media (min-width: $desktop-width) {
     @include font(20px, 32px, 400);
     color: $basic-darkest;
+    padding-left: 50px;
   }
 }
 
 .pricing__list {
   @include reset-list;
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .pricing__item {
-  border: 1px solid rgba($basic-dark, 0.3);
-  border-radius: 6px;
+  @media (max-width: $mobile-width-only) {
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
 
-  &--active {
-    border: 3px solid $accent-primary;
+  @media (min-width: $tablet-width) {
+    max-width: 288px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 370px;
+    box-sizing: border-box;
+    padding: 40px 30px 30px;
+    border: 1px solid rgba($basic-dark, 0.3);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      margin-right: 30px;
+    }
+
+    &:hover {
+      border: 3px solid $accent-primary;
+      padding: 38px 28px 28px;
+    }
+  }
+}
+
+.pricing__button {
+  @media (min-width: $desktop-width) {
+    margin-top: auto;
+  }
+}
+
+.pricing__content {
+  padding: 30px 20px 45px;
+  border: 1px solid rgba($basic-dark, 0.3);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: none;
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    padding: 0;
+  }
+}
+
+.pricing__item:hover .pricing__content {
+  border: 3px solid $accent-primary;
+  padding: 28px 18px 45px;
+  border-bottom: none;
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    padding: 0;
   }
 }
 
 .pricing__title {
   @include font(24px, 34px, 600);
   color: rgba($basic-darkest, 0.7);
+  margin: 0;
+  text-align: center;
+  padding-bottom: 11px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 40px;
+  }
 }
 
-.pricing__item--active .pricing__title {
+.pricing__item:hover .pricing__title {
   color: $accent-primary;
 }
+
 
 .pricing__price {
   @include font(25px, 34px, 700);
@@ -73,8 +216,36 @@
 
 .pricing__text {
   @include font(16px, 24px, 400);
+  margin: 0;
+  padding-bottom: 11px;
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 28px;
+    text-align: left;
+  }
 }
 
 .pricing__feature {
   @include font(16px, 32px, 400);
+}
+
+.pricing__features-list {
+  @include reset-list;
+  padding-left: 30px;
+  padding-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+  }
+}
+
+.pricing__feature {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 15px;
+
+    &:last-child {
+      padding-bottom: 54px;
+    }
+  }
 }

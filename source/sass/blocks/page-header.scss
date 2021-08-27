@@ -5,5 +5,14 @@
   @media (min-width: $desktop-width) {
     max-width: 1170px;
     margin: 0 auto;
+    padding: 36px 0 32px;
   }
 }
+.page-header__logo {
+  display: flex;
+  align-items: center;
+}
+
+// .page-header__logo-image {
+
+// }

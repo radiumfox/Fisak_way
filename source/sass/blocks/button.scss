@@ -3,8 +3,22 @@
   color: $basic-lightest;
   text-decoration: none;
   @include font(10px, 12px, 500);
+  background-color: $accent-primary;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 340px;
+  display: inline-block;
+  border: none;
+  padding: 18px 40px;
+  letter-spacing: 2px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 288px;
+  }
 
   @media (min-width: $desktop-width) {
     @include font(12px, 15px, 700);
+    padding: 30px 40px;
+    max-width: 310px;
   }
 }

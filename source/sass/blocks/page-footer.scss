@@ -1,21 +1,116 @@
 .page-footer__wrapper {
+  padding: 0 16px 26px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 0 20px 54px;
+  }
+
   @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 0 74px;
   }
 }
 
 .page-footer__title {
   @include font(18px, 32px, 600);
   color: $basic-darkest;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 20px;
+
+  &--travels {
+    width: 100%;
+    text-align: left;
+  }
+
+  &--cororate {
+    @media (min-width: $tablet-width) {
+      padding-top: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 0;
+      text-align: left;
+    }
+  }
+}
+
+.page-footer__travels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding-bottom: 30px;
+    margin: 0;
+    justify-content: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}
+
+.page-footer__text-box {
+  min-width: 134px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 95px;
+    padding-right: 30px;
+  }
+}
+
+.page-footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding-left: 50px;
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
 }
 
 .page-footer__text {
   @include font(14px, 17px, 400);
   color: rgba($basic-darkest, 0.5);
+  text-align: center;
+  margin: 0;
+  padding-bottom: 10px;
 
   &--lh-bigger {
     line-height: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -23,9 +118,23 @@
   @include font(14px, 17px, 400);
   color: $accent-primary;
   text-decoration: none;
+  padding-bottom: 20px;
 
   &--phone {
     @include font(16px, 32px, 400);
     text-decoration: underline;
+    padding-bottom: 9px;
+  }
+}
+
+.page-footer__corporate {
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
   }
 }

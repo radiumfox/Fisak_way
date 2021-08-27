@@ -1,18 +1,93 @@
-.request__wrapper {
+.request {
+  background-color: $basic-light;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/request-bg-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 455px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
   @media (min-width: $desktop-width) {
+    background-image: url("../img/request-bg-desktop.jpg");
+    background-size: contain;
+    background-color: inherit;
     max-width: 1170px;
+    margin: 0 auto 160px;
+  }
+}
+
+.request__wrapper {
+  padding: 50px 16px;
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-lightest;
     margin: 0 auto;
+    width: 658px;
+    box-sizing: border-box;
+    padding: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 auto;
+    box-shadow: 0px 4px 30px $shadow-primary
   }
 }
 
 .request__text {
   @include font(25px, 32px, 600);
+  text-align: center;
+  margin: 0;
 }
 
 .request__offer {
   @include font(16px, 24px, 400);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.request__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.request__form-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .request__control {
   @include placeholder;
+  margin-bottom: 20px;
+  padding: 15px;
+  flex-shrink: 0;
+  border: none;
+  outline: 1px solid rgba($basic-dark, 0.3);
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 269px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.request__button {
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    width: 176px;
+    padding: 18px 0;
+  }
 }

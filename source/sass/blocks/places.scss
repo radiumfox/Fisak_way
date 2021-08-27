@@ -1,12 +1,83 @@
 .places__wrapper {
+  padding: 0 16px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 76px;
+  }
+
   @media (min-width: $desktop-width) {
+    display: block;
     max-width: 1170px;
-    margin: 0 auto;
+    margin: 200px auto 0;
+    padding: 0;
+  }
+}
+
+.places__item {
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    &:last-child:nth-child(2n+1) {
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:last-child:nth-child(2n+1) {
+      margin: 0;
+    }
+  }
+}
+
+.places__ancor {
+  text-decoration: none;
+  color: $basic-dark;
+  display: grid;
+  grid-template-columns: min-content;
+  grid-template-rows: auto auto 70px;
+  align-items: start;
+}
+
+.places__image-box {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+}
+
+.places__more {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: none;
+}
+
+.places__ancor:hover .places__more {
+  display: inline-block;
+}
+
+.places__title {
+  @include font(24px, 29px, 500);
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  background-color: $basic-lightest;
+  width: 215px;
+  padding: 17px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.places__img {
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    height: 430px;
   }
 }
 
 .places__main-title {
   @include font(24px, 36px, 600);
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     @include font(30px, 45px, 600);
@@ -14,17 +85,43 @@
 
   @media (min-width: $desktop-width) {
     @include font(55px, 80px, 600);
+    max-width: 358px;
   }
 }
 
 .places__text {
   @include font(16px, 28px, 400);
+  margin: 0;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 350px;
+    padding-bottom: 55px;
+    text-align: left;
+  }
 }
 
-.places__title {
-  @include font(24px, 29px, 500);
-}
 
 .places__list {
   @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: 0;
+    row-gap: 0;
+  }
 }
