@@ -1,0 +1,44 @@
+.site-list {
+  @include reset-list;
+  padding-top: 134px;
+  box-sizing: border-box;
+  min-height: 568px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    min-height: 0;
+  }
+}
+
+.site-list__link {
+  @include font(20px, 28px, 600);
+  color: $secondary-dark;
+  text-decoration: none;
+  display: block;
+  padding: 17px 16px;
+  margin-bottom: 30px;
+  background-color: $basic-light;
+
+  &--underline {
+    text-decoration: underline;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(14px, 17px, 500);
+    background-color: $basic-lightest;
+    color: $basic-darkest;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.site-list__item {
+  &--phone {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    padding-left: 40px;
+  }
+}

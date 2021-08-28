@@ -1,40 +1,122 @@
-.main-nav__list {
-  @include reset-list;
+.main-nav {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    min-width: none;
+  }
+}
+
+.main-nav__toggle {
+  width: 50px;
+  height: 50px;
+  background-color: $accent-primary;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: -37px;
+  z-index: 2;
+  display: block;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover,
+  &:active {
+    background-color: $accent-hover;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+// closed menu
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  width: 22px;
+  height: 1px;
+  background-color: $basic-lightest;
+  box-shadow: 0 8px 0 0 $basic-lightest, 0 16px 0 0 $basic-lightest;
+
+  @media (min-width: $tablet-width) {
+    left: 25px;
+  }
+}
+
+.main-nav--closed .main-nav__list {
+  display: none;
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 585px;
   }
 }
 
-.main-nav__item {
-  &--phone {
-    display: none;
-  }
+// opened menu
+
+.main-nav--opened.main-nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 320px;
+  background-color: $basic-lightest;
 
   @media (min-width: $desktop-width) {
-    display: inline-block;
-    padding-left: 40px;
+    position: static;
   }
 }
 
-.main-nav__link {
-  color: $basic-darkest;
-  text-decoration: none;
+.main-nav--opened .main-nav__toggle {
+  background-color: $basic-lightest;
+  top: 0;
+  right: 0;
 
-  &--underline {
-    text-decoration: underline;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 11px;
+    width: 30px;
+    height: 1px;
+    background-color: $special-grey;
+    z-index: 1000;
   }
 
-  @media (min-width: $desktop-width) {
-    @include font(14px, 17px, 500);
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
   }
 }
 
-.main-nav__toggle {
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
+// no JS
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs.main-nav {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .main-nav__list {
+  display: block;
 }

@@ -1,18 +1,21 @@
 .page-header__wrapper {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  padding: 15px 0 13px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 21px;
+  }
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
     max-width: 1170px;
     margin: 0 auto;
     padding: 36px 0 32px;
   }
 }
+
 .page-header__logo {
   display: flex;
   align-items: center;
 }
-
-// .page-header__logo-image {
-
-// }

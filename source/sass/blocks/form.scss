@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__control {
+  @include placeholder;
+  margin-bottom: 20px;
+  padding: 15px;
+  flex-shrink: 0;
+  border: none;
+  outline: 1px solid rgba($basic-dark, 0.3);
+  box-sizing: border-box;
+}

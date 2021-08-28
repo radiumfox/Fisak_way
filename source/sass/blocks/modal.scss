@@ -1,0 +1,85 @@
+.modal {
+  display: none;
+  background-color: $basic-lightest;
+  width: 100vw;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-light;
+    width: 728px;
+    background-image: url("../img/popup-bg.jpg");
+    background-repeat: no-repeat;
+  }
+}
+
+.modal--show {
+  display: block;
+  position: fixed;
+  bottom: 100px;
+  box-shadow: 0px 1px 30px $shadow-primary;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+    margin: 0 auto;
+    left: calc(50% - 364px);
+  }
+}
+
+.modal__wrapper {
+  padding: 100px 16px 185px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 72px 60px 89px;
+    box-sizing: border-box;
+    max-width: 390px;
+    margin-left: auto;
+  }
+}
+
+.modal__title {
+  @include font(25px, 42px, 600);
+  margin: 0;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.modal__button {
+  @media (min-width: $desktop-width) {
+    padding: 18px 0 17px;
+    max-width: 176px;
+    margin: 0 auto;
+  }
+}
+
+.modal__close {
+  background-color: inherit;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 11px;
+    width: 30px;
+    height: 1px;
+    background-color: $special-grey;
+    z-index: 1000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
