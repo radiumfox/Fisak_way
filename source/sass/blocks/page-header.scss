@@ -1,6 +1,6 @@
 .page-header__wrapper {
   position: relative;
-  padding: 15px 0 13px;
+  padding: 16px 0 16px;
 
   @media (min-width: $tablet-width) {
     padding-left: 21px;
@@ -18,4 +18,5 @@
 .page-header__logo {
   display: flex;
   align-items: center;
+  padding-left: 16px;
 }

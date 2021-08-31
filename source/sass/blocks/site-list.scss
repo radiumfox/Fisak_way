@@ -3,6 +3,7 @@
   padding-top: 134px;
   box-sizing: border-box;
   min-height: 568px;
+  align-items: center;
 
   @media (min-width: $desktop-width) {
     padding-top: 0;
@@ -18,14 +19,20 @@
   padding: 17px 16px;
   margin-bottom: 30px;
   background-color: $basic-light;
+  background-image: url("../img/icons/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: 93%;
 
-  &--underline {
+  &--phone {
     text-decoration: underline;
+    display: flex;
+    align-items: center;
   }
 
   @media (min-width: $desktop-width) {
     @include font(14px, 17px, 500);
     background-color: $basic-lightest;
+    background-image: none;
     color: $basic-darkest;
     margin-bottom: 0;
     padding: 0;
@@ -40,5 +47,23 @@
   @media (min-width: $desktop-width) {
     display: inline-block;
     padding-left: 40px;
+  }
+}
+
+.site-list__phone-number {
+  @media (min-width: $desktop-width) {
+    padding-left: 13px;
+  }
+}
+
+.site-list__item:hover .site-list__link {
+  @media (min-width: $desktop-width) {
+    color: $accent-primary;
+  }
+}
+
+.site-list__item:hover .site-list__icon {
+  @media (min-width: $desktop-width) {
+    fill: $accent-primary;
   }
 }

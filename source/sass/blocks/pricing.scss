@@ -1,6 +1,6 @@
 .pricing__wrapper {
   padding: 0 16px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
   @media (min-width: $tablet-width) {
     padding: 0 20px;
@@ -65,10 +65,8 @@
   margin: 0;
   padding-bottom: 10px;
 
-
   @media (min-width: $desktop-width) {
     @include font(22px, 34px, 500);
-
   }
 }
 
@@ -86,39 +84,25 @@
   }
 
   &--email {
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
+    display: none;
   }
 
   &--phone {
-    @include font(16px, 32px, 400);
+    @include font(18px, 32px, 400);
+
     @media (min-width: $desktop-width) {
       @include font(20px, 32px, 400);
       color: $basic-darkest;
-      padding-left: 50px;
+      // padding-left: 50px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
     }
-  }
-}
-
-.pricing__phone {
-  @include font(18px, 32px, 400);
-  color: $accent-primary;
-
-  @media (min-width: $tablet-width) {
-    @include font(16px, 32px, 400);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include font(20px, 32px, 400);
-    color: $basic-darkest;
-    padding-left: 50px;
   }
 }
 
 .pricing__list {
   @include reset-list;
-  padding-top: 20px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -162,17 +146,25 @@
 }
 
 .pricing__button {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: initial;
+  }
+
   @media (min-width: $desktop-width) {
+    width: 100%;
     margin-top: auto;
   }
 }
 
 .pricing__content {
-  padding: 30px 20px 45px;
+  padding: 30px 20px 30px;
   border: 1px solid rgba($basic-dark, 0.3);
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-bottom: none;
+  min-height: 518px;
 
   @media (min-width: $desktop-width) {
     border: none;
@@ -182,7 +174,7 @@
 
 .pricing__item:hover .pricing__content {
   border: 3px solid $accent-primary;
-  padding: 28px 18px 45px;
+  padding: 28px 18px 30px;
   border-bottom: none;
 
   @media (min-width: $desktop-width) {
@@ -202,6 +194,8 @@
 
   @media (min-width: $desktop-width) {
     padding-bottom: 40px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -211,6 +205,7 @@
 
 .pricing__price {
   @include font(25px, 34px, 700);
+  padding-top: 8px;
 }
 
 .pricing__text {
@@ -218,6 +213,17 @@
   margin: 0;
   padding-bottom: 11px;
   text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba($basic-dark, 0.3);
+    bottom: 0;
+    right: 0;
+  }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 28px;
@@ -225,13 +231,43 @@
   }
 }
 
+.pricing__item:hover .pricing__text {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $accent-primary;
+    bottom: 0;
+    right: 0;
+  }
+}
+
 .pricing__feature {
   @include font(16px, 32px, 400);
+  list-style-image: url("../img/icons/tick.svg");
+  padding-bottom: 10px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 15px;
+
+    &:last-child {
+      padding-bottom: 54px;
+    }
+  }
+}
+
+.pricing__item:hover .pricing__feature {
+  list-style-image: url("../img/icons/black-tick.svg");
 }
 
 .pricing__features-list {
   @include reset-list;
-  padding-left: 30px;
+  padding-left: 26px;
   padding-top: 20px;
 
   @media (min-width: $desktop-width) {
@@ -239,12 +275,17 @@
   }
 }
 
-.pricing__feature {
-  @media (min-width: $desktop-width) {
-    padding-bottom: 15px;
+.pricing__icon {
+  display: none;
 
-    &:last-child {
-      padding-bottom: 54px;
-    }
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    fill: $accent-primary;
+  }
+}
+
+.pricing__contacts-number {
+  @media (min-width: $desktop-width) {
+    padding-left: 20px;
   }
 }

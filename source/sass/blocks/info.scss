@@ -1,3 +1,21 @@
+.info {
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/info-bg-desktop.svg");
+      background-size: contain;
+      width: 100%;
+      height: 1088px;
+      z-index: -1;
+      top: 130px;
+      left: 0;
+    }
+  }
+}
+
 .info__wrapper {
   margin-bottom: 45px;
 
@@ -14,16 +32,16 @@
 .info__tabs-list {
   @include reset-list;
   display: flex;
-  // overflow-x: hidden;
   overflow: auto;
   scrollbar-width: none;
+  width: calc(100vw - 16px);
+  border-bottom: 1px solid rgba($basic-dark, 0.3);
+  padding-bottom: 10px;
+  margin-left: 16px;
+
   &::-webkit-scrollbar {
     display: none;
   }
-  width: calc(100vw - 16px);
-  border-bottom: 1px solid rgba($basic-dark, 0.3);
-  margin-left: 16px;
-
 
   @media (min-width: $tablet-width) {
     width: calc(100vw - 20px);
@@ -53,16 +71,17 @@
 
 .info__country-wrapper {
   padding: 0 16px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
   @media (min-width: $tablet-width) {
     padding: 0 20px;
   }
 
   @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     display: flex;
     margin-bottom: 0;
-    margin-top: 65px;
     max-width: 902px;
   }
 }
@@ -78,7 +97,11 @@
     display: block;
 
     @media (min-width: $desktop-width) {
-      display: flex;
+      display: grid;
+      grid-template-columns: 425px 1fr;
+      grid-template-rows: 1fr;
+      column-gap: 45px;
+      margin-top: 65px;
     }
   }
 }
@@ -116,6 +139,7 @@
   margin: 0;
   text-align: center;
   padding-bottom: 20px;
+  letter-spacing: -0.5px;
 
   @media (min-width: $desktop-width) {
     padding-top: 30px;
@@ -125,9 +149,18 @@
 }
 
 .info__button {
+  text-align: center;
+
   @media (min-width: $desktop-width) {
     @include font(12px, 15px, 700);
     width: 250px;
     padding: 30px 39px;
+  }
+}
+
+.info__review {
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
 }

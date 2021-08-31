@@ -1,13 +1,18 @@
 const modalButtons = document.querySelectorAll(".button--buy");
 const modalWindow = document.querySelector(".modal");
-const modalClose = document.querySelector(".modal__close");
+const modalCloseButton = document.querySelector(".modal__close");
 
 const modalForm = modalWindow.querySelector(".modal__form");
 const modalPhone = modalWindow.querySelector(".modal__control--phone");
 const modalEmail = modalWindow.querySelector(".modal__control--email");
 
+// const successMessage = document.querySelector(".success");
+// const successCloseButton = successMessage.querySelector(".success__close");
+
 let isStorageSupport = true;
 let storage = "";
+
+// modal window
 
 try {
   storage = localStorage.getItem("name");
@@ -29,7 +34,7 @@ modalButtons.forEach(button => {
   })
 });
 
-modalClose.addEventListener("click", (evt) => {
+modalCloseButton.addEventListener("click", (evt) => {
   evt.preventDefault();
   modalWindow.classList.remove("modal--show");
 });
@@ -50,14 +55,8 @@ if (modalWindow.classList.contains("modal--show")) {
 };
 
 
-
-// modalForm.addEventListener("submit", (evt) => {
-//   if (!modalPhone.value || !modalEmail.value) {
-//     evt.preventDefault();
-//     modalWindow.classList.add("modal--error");
-//   } else {
-//     if (isStorageSupport) {
-//       localStorage.setItem("name", modalPhone.value);
-//     }
-//   }
+// const submitModalButton = document.querySelector(".modal__button");
+// submitModalButton.addEventListener("click", (evt)=> {
+//   evt.preventDefault();
+//   showSuccessMessage();
 // });

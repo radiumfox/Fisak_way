@@ -1,27 +1,60 @@
+.review {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr min-content;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 114px 1fr 115px;
+  }
+}
+
 .review__wrapper {
   width: 268px;
   margin: 0 auto;
-  padding: 30px 20px 34px;
+  padding: 33px 20px 34px;
   box-sizing: border-box;
+  background-color: $basic-lightest;
+
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
 
   @media (min-width: $tablet-width) {
     width: 382px;
     padding: 30px;
-    background-color: $basic-lightest;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 180px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 }
 
 .review__title {
   @include font(20px, 24px, 500);
   margin: 0;
+  position: relative;
+  text-align: center;
+  padding-bottom: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 68px;
+    background-color: $accent-primary;
+    left: calc(50% - 34px);
+    bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     @include font(30px, 36px, 500);
     padding-bottom: 11px;
+    text-align: left;
   }
 }
 
@@ -34,10 +67,14 @@
   color: rgba($basic-dark, 0.7);
   margin: 0;
   padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  letter-spacing: -0.5px;
 
   @media (min-width: $tablet-width) {
     padding-top: 21px;
     padding-bottom: 35px;
+    text-align: left;
   }
 }
 
@@ -45,13 +82,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
   }
 }
 
+.review__author-img {
+  padding-bottom: 10px;
+}
+
 .review__author-name {
   @include font(16px, 20px, 500);
   font-style: normal;
+  letter-spacing: -0.5px;
+  padding-left: 5px;
+}
+
+.review__image-box {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+  }
+}
+
+.review__img {
+  object-fit: cover;
+  object-position: 5% bottom;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 430px;
+    height: 596px;
+  }
 }

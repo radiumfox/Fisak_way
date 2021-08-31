@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Лендинг тура по Европе">
     <title>Путешествие по Европе</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="page-header__logo-wrapper">
-          <a class="page-header__logo" href="#">
-            <img class="page-header__logo-image" src="img/logo.svg" width="57" height="22" alt="Логотип">
-          </a>
-        </div>
+        <a class="page-header__logo" href="#">
+          <img class="page-header__logo-image" src="img/logo.svg" width="44" height="17" alt="Логотип">
+        </a>
 
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
@@ -28,7 +26,12 @@
               <a class="site-list__link" href="#prices">Цены</a>
               </li>
             <li class="site-list__item site-list__item--phone">
-              <a class="site-list__link site-list__link--underline" href="tel:+749978468446">+7 (499) -784-684-46</a>
+              <a class="site-list__link site-list__link--phone" href="tel:+749978468446">
+                <svg class="site-list__icon" width="17" height="24">
+                  <use xlink:href="img/icons/sprite.svg#phone-icon"></use>
+                </svg>
+                <span class="site-list__phone-number">+7 (499) -784-684-46</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -42,7 +45,7 @@
             <h1 class="promo__title">Путешествие по Европе</h1>
             <p class="promo__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
             <a class="promo__button button" href="#tour">
-              Смотреть тур
+              <span>Смотреть тур</span>
               <svg class="promo__arrow" width="14" height="14">
                 <use xlink:href="img/icons/sprite.svg#arrow-down"></use>
               </svg>
@@ -58,64 +61,64 @@
 
           <ul class="places__list">
             <li class="places__item">
-              <a class="places__ancor" href="#greece" data-id="greece">
-                <div class="places__image-box">
-                  <picture>
-                    <source media="(min-width: 1024px)" srcset="img/places/greece-desktop.jpg">
-                    <img class="places__img" src="img/places/greece-tablet.jpg" width="288" height="425" alt="Горы Греции">
-                  </picture>
-                </div>
-                <p class="places__more">Смотреть подробнее</p>
-                <h3 class="places__title">Греция</h3>
-              </a>
+              <div class="places__image-box">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/places/greece-desktop.webp 1x, img/places/greece-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/places/greece.webp 1x, img/places/greece@2x.webp 2x">
+                  <source media="(min-width: 1024px)" srcset="img/places/greece-desktop.jpg 1x, img/places/greece-desktop@2x.jpg 2x">
+                  <img class="places__img" src="img/places/greece.jpg" srcset="img/places/greece@2x.jpg 2x" width="288" height="425" alt="Метеора">
+                </picture>
+              </div>
+              <a class="places__ancor" href="#greece" data-id="greece">Смотреть подробнее</a>
+              <h3 class="places__title">Греция</h3>
             </li>
             <li class="places__item">
-              <a class="places__ancor" href="#albania" data-id="albania">
-                <div class="places__image-box">
-                  <picture>
-                    <source media="(min-width: 1024px)" srcset="img/places/albania-desktop.jpg">
-                    <img class="places__img" src="img/places/albania-tablet.jpg" width="288" height="425" alt="Пляж Албании">
-                  </picture>
-                </div>
-                <p class="places__more">Смотреть подробнее</p>
-                <h3 class="places__title">Албания</h3>
-              </a>
+              <div class="places__image-box">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/places/albania-desktop.webp 1x, img/places/albania-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/places/albania.webp 1x, img/places/albania@2x.webp 2x">
+                  <source media="(min-width: 1024px)" srcset="img/places/albania-desktop.jpg 1x, img/places/albania-desktop@2x.jpg 2x">
+                  <img class="places__img" src="img/places/albania.jpg" srcset="img/places/albania@2x.jpg 2x" width="288" height="425" alt="Ксамиль">
+                </picture>
+              </div>
+              <a class="places__ancor" href="#albania" data-id="albania">Смотреть подробнее</a>
+              <h3 class="places__title">Албания</h3>
             </li>
             <li class="places__item">
-              <a class="places__ancor" href="#macedonia" data-id="macedonia">
-                <div class="places__image-box">
-                  <picture>
-                    <source media="(min-width: 1024px)" srcset="img/places/makedonia-desktop.jpg">
-                    <img class="places__img" src="img/places/makedonia-tablet.jpg" width="288" height="425" alt="Берег Македонии">
-                  </picture>
-                </div>
-                <p class="places__more">Смотреть подробнее</p>
-                <h3 class="places__title">Македония</h3>
-              </a>
+              <div class="places__image-box">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/places/macedonia-desktop.webp 1x, img/places/macedonia-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/places/macedonia.webp 1x, img/places/macedonia@2x.webp 2x">
+                  <source media="(min-width: 1024px)" srcset="img/places/macedonia-desktop.jpg 1x, img/places/macedonia-desktop@2x.jpg 2x">
+                  <img class="places__img" src="img/places/macedonia.jpg" srcset="img/places/macedonia@2x.jpg 2x" width="288" height="425" alt="Кокино">
+                </picture>
+              </div>
+              <a class="places__ancor" href="#macedonia" data-id="macedonia">Смотреть подробнее</a>
+              <h3 class="places__title">Македония</h3>
             </li>
             <li class="places__item">
-              <a class="places__ancor" href="#montenegro" data-id="montenegro">
-                <div class="places__image-box">
-                  <picture>
-                    <source media="(min-width: 1024px)" srcset="img/places/montenegro-desktop.jpg">
-                    <img class="places__img" src="img/places/montenegro-tablet.jpg" width="288" height="425" alt="Реки Черногории">
-                  </picture>
-                </div>
-                <p class="places__more">Смотреть подробнее</p>
-                <h3 class="places__title">Черногория</h3>
-              </a>
+              <div class="places__image-box">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/places/montenegro-desktop.webp 1x, img/places/montenegro-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/places/montenegro.webp 1x, img/places/montenegro@2x.webp 2x">
+                  <source media="(min-width: 1024px)" srcset="img/places/montenegro-desktop.jpg 1x, img/places/montenegro-desktop@2x.jpg 2x">
+                  <img class="places__img" src="img/places/montenegro.jpg" srcset="img/places/montenegro@2x.jpg 2x" width="288" height="425" alt="Тара">
+                </picture>
+              </div>
+              <a class="places__ancor" href="#montenegro" data-id="montenegro">Смотреть подробнее</a>
+              <h3 class="places__title">Черногория</h3>
             </li>
             <li class="places__item">
-              <a class="places__ancor" href="#croatia" data-id="croatia">
-                <div class="places__image-box">
-                  <picture>
-                    <source media="(min-width: 1024px)" srcset="img/places/croatia-desktop.jpg">
-                    <img class="places__img" src="img/places/croatia-tablet.jpg" width="288" height="425" alt="Ущелья Хорватии">
-                  </picture>
-                </div>
-                <p class="places__more">Смотреть подробнее</p>
-                <h3 class="places__title">Хорватия</h3>
-              </a>
+              <div class="places__image-box">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/places/croatia-desktop.webp 1x, img/places/croatia-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/places/croatia.webp 1x, img/places/croatia@2x.webp 2x">
+                  <source media="(min-width: 1024px)" srcset="img/places/croatia-desktop.jpg 1x, img/places/croatia-desktop@2x.jpg 2x">
+                  <img class="places__img" src="img/places/croatia.jpg" srcset="img/places/croatia@2x.jpg 2x" width="288" height="425" alt="Бередине">
+                </picture>
+              </div>
+              <a class="places__ancor" href="#croatia" data-id="croatia">Смотреть подробнее</a>
+              <h3 class="places__title">Хорватия</h3>
             </li>
           </ul>
         </div>
@@ -149,15 +152,24 @@
                     <p class="info__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
                     <a class="info__button button button--buy" href="#">Купить тур сейчас</a>
                   </div>
-                  <img src="#" width="320" height="415" alt="Горы Греции">
                 </div>
                 <div class="info__reviews review">
+                  <div class="review__image-box">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/reviews/review-greece-desktop.webp 1x, img/reviews/review-greece-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-greece-tablet.webp 1x, img/reviews/review-greece-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/reviews/review-greece-mobile.webp 1x, img/reviews/review-greece-mobile@2x.webp 2x">
+                      <source media="(min-width: 1024px)" srcset="img/reviews/review-greece-desktop.jpg 1x, img/reviews/review-greece-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/reviews/review-greece-tablet.jpg 1x, img/reviews/review-greece-tablet@2x.jpg 2x">
+                      <img class="review__img" src="img/reviews/review-greece-mobile.jpg" srcset="img/reviews/review-greece-mobile@2x.jpg 2x" width="320" height="415" alt="Метеора">
+                    </picture>
+                  </div>
                   <div class="review__wrapper">
                     <h5 class="review__title">Отзывы</h5>
                     <blockquote class="review__content">
                       <p class="review__text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
                       <div class="review__author">
-                        <img class="review__author-img" src="#" width="37" height="38" alt="Аватар автора">
+                        <img class="review__author-img" src="img/avatars/review-1.png" width="37" height="38" alt="Аватар автора">
                         <cite class="review__author-name">Влада Голицина</cite>
                       </div>
                     </blockquote>
@@ -172,15 +184,24 @@
                     <p class="info__text">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.</p>
                     <a class="info__button button button--buy" href="#">Купить тур сейчас</a>
                   </div>
-                  <img src="#" width="320" height="415" alt="Пляж Албании">
                 </div>
                 <div class="info__reviews review">
+                  <div class="review__image-box">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/reviews/review-albania-desktop.webp 1x, img/reviews/review-albania-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-albania-tablet.webp 1x, img/reviews/review-albania-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/reviews/review-albania-mobile.webp 1x, img/reviews/review-albania-mobile@2x.webp 2x">
+                      <source media="(min-width: 1024px)" srcset="img/reviews/review-albania-desktop.jpg 1x, img/reviews/review-albania-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/reviews/review-albania-tablet.jpg 1x, img/reviews/review-albania-tablet@2x.jpg 2x">
+                      <img class="review__img" src="img/reviews/review-albania-mobile.jpg" srcset="img/reviews/review-albania-mobile@2x.jpg 2x" width="320" height="415" alt="Ксамиль">
+                    </picture>
+                  </div>
                   <div class="review__wrapper">
                     <h5 class="review__title">Отзывы</h5>
                     <blockquote class="review__content">
                       <p class="review__text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
                       <div class="review__author">
-                        <img class="review__author-img" src="#" width="37" height="38" alt="Аватар автора">
+                        <img class="review__author-img" src="img/avatars/review-2.png" width="37" height="38" alt="Аватар автора">
                         <cite class="review__author-name">Маришка</cite>
                       </div>
                     </blockquote>
@@ -195,15 +216,24 @@
                     <p class="info__text">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.</p>
                     <a class="info__button button button--buy" href="#">Купить тур сейчас</a>
                   </div>
-                  <img src="#" width="320" height="415" alt="Берег Македонии">
                 </div>
                 <div class="info__reviews review">
+                  <div class="review__image-box">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/reviews/review-albania-macedonia.webp 1x, img/reviews/review-macedonia-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-macedonia-tablet.webp 1x, img/reviews/review-macedonia-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/reviews/review-macedonia-mobile.webp 1x, img/reviews/review-macedonia-mobile@2x.webp 2x">
+                      <source media="(min-width: 1024px)" srcset="img/reviews/review-macedonia-desktop.jpg 1x, img/reviews/review-macedonia-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/reviews/review-macedonia-tablet.jpg 1x, img/reviews/review-macedonia-tablet@2x.jpg 2x">
+                      <img class="review__img" src="img/reviews/review-macedonia-mobile.jpg" srcset="img/reviews/review-macedonia-mobile@2x.jpg 2x" width="320" height="415" alt="Кокино">
+                    </picture>
+                  </div>
                   <div class="review__wrapper">
                     <h5 class="review__title">Отзывы</h5>
                     <blockquote class="review__content">
                       <p class="review__text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.</p>
                       <div class="review__author">
-                        <img class="review__author-img" src="#" width="37" height="38" alt="Аватар автора">
+                        <img class="review__author-img" src="img/avatars/review-3.png" width="37" height="38" alt="Аватар автора">
                         <cite class="review__author-name">Михаил Кузьмин</cite>
                       </div>
                     </blockquote>
@@ -218,15 +248,24 @@
                     <p class="info__text">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.</p>
                     <a class="info__button button button--buy" href="#">Купить тур сейчас</a>
                   </div>
-                  <img src="#" width="320" height="415" alt="Реки Черногории">
                 </div>
                 <div class="info__reviews review">
+                  <div class="review__image-box">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/reviews/review-albania-montenegro.webp 1x, img/reviews/review-montenegro-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-montenegro-tablet.webp 1x, img/reviews/review-montenegro-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/reviews/review-montenegro-mobile.webp 1x, img/reviews/review-montenegro-mobile@2x.webp 2x">
+                      <source media="(min-width: 1024px)" srcset="img/reviews/review-montenegro-desktop.jpg 1x, img/reviews/review-montenegro-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/reviews/review-montenegro-tablet.jpg 1x, img/reviews/review-montenegro-tablet@2x.jpg 2x">
+                      <img class="review__img" src="img/reviews/review-montenegro-mobile.jpg" srcset="img/reviews/review-montenegro-mobile@2x.jpg 2x" width="320" height="415" alt="Тара">
+                    </picture>
+                  </div>
                   <div class="review__wrapper">
                     <h5 class="review__title">Отзывы</h5>
                     <blockquote class="review__content">
                       <p class="review__text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
                       <div class="review__author">
-                        <img class="review__author-img" src="#" width="37" height="38" alt="Аватар автора">
+                        <img class="review__author-img" src="img/avatars/review-4.png" width="37" height="38" alt="Аватар автора">
                         <cite class="review__author-name">Анастасия Мей</cite>
                       </div>
                     </blockquote>
@@ -241,15 +280,24 @@
                     <p class="info__text">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.</p>
                     <a class="info__button button button--buy" href="#">Купить тур сейчас</a>
                   </div>
-                  <img src="#" width="320" height="415" alt="Ущелья Хорватии">
                 </div>
                 <div class="info__reviews review">
+                  <div class="review__image-box">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/reviews/review-albania-croatia.webp 1x, img/reviews/review-croatia-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-croatia-tablet.webp 1x, img/reviews/review-croatia-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/reviews/review-croatia-mobile.webp 1x, img/reviews/review-croatia-mobile@2x.webp 2x">
+                      <source media="(min-width: 1024px)" srcset="img/reviews/review-croatia-desktop.jpg 1x, img/reviews/review-croatia-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/reviews/review-croatia-tablet.jpg 1x, img/reviews/review-croatia-tablet@2x.jpg 2x">
+                      <img class="review__img" src="img/reviews/review-croatia-mobile.jpg" srcset="img/reviews/review-croatia-mobile@2x.jpg 2x" width="320" height="415" alt="Бередине">
+                    </picture>
+                  </div>
                   <div class="review__wrapper">
                     <h5 class="review__title">Отзывы</h5>
                     <blockquote class="review__content">
                       <p class="review__text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
                       <div class="review__author">
-                        <img class="review__author-img" src="#" width="37" height="38" alt="Аватар автора">
+                        <img class="review__author-img" src="img/avatars/review-5.png" width="37" height="38" alt="Аватар автора">
                         <cite class="review__author-name">Владимир Мулицин</cite>
                       </div>
                     </blockquote>
@@ -270,7 +318,12 @@
             <div class="pricing__contacts">
               <p class="pricing__contacts-text">Свяжитесь с нами</p>
               <a class="pricing__contact pricing__contact--email" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-              <a class="pricing__contact pricing__contact--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+              <a class="pricing__contact pricing__contact--phone" href="tel:+749978468446">
+                <svg class="pricing__icon" width="17" height="24">
+                  <use xlink:href="img/icons/sprite.svg#phone-icon"></use>
+                </svg>
+                <span class="pricing__contacts-number">+7 (499) -784-684-46</span>
+              </a>
             </div>
           </div>
 
@@ -339,6 +392,14 @@
           <button class="modal__close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
         </div>
       </section>
+
+      <template id="success">
+        <div class="success">
+          <p class="success__message">Форма успешно отправлена, спасибо! :)</p>
+          <button class="success__close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+        </div>
+      </template>
+
     </main>
 
     <footer class="page-footer">
@@ -370,9 +431,19 @@
         </div>
 
         <div class="page-footer__contacts">
-          <h2 class="page-footer__title">Наши контакты</h2>
-          <a class="page-footer__contact" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-          <a class="page-footer__contact page-footer__contact--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+          <h2 class="page-footer__title page-footer__title--contacts">Наши контакты</h2>
+          <a class="page-footer__contact" href="mailto:puteshestviemechta@gmail.ru">
+            <svg class="page-footer__icon" width="26" height="20">
+              <use xlink:href="img/icons/sprite.svg#mail-icon"></use>
+            </svg>
+            <span class="page-footer__contact-text">puteshestviemechta@gmail.ru</span>
+          </a>
+          <a class="page-footer__contact page-footer__contact--phone" href="tel:+749978468446">
+            <svg class="page-footer__icon page-footer__icon--phone" width="17" height="24">
+              <use xlink:href="img/icons/sprite.svg#phone-icon"></use>
+            </svg>
+            <span class="page-footer__contact-text">+7 (499) -784-684-46</span>
+          </a>
         </div>
 
         <div class="page-footer__corporate">
@@ -383,9 +454,7 @@
     </footer>
 
 
-    <script src="js/main-nav.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/tabs.js"></script>
+    <script src="js/main.min.js"></script>
 
   </body>
 </html>
