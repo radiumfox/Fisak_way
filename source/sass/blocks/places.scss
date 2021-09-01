@@ -7,36 +7,58 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 76px;
+    margin-bottom: 53px;
   }
 
   @media (min-width: $desktop-width) {
     display: block;
     max-width: 1170px;
-    margin: 200px auto 0;
+    margin: 200px auto 28px;
     padding: 0;
   }
 }
 
+.places__list {
+  @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .places__item {
-  padding-bottom: 26px;
+  margin-bottom: 31px;
   display: grid;
   grid-template-columns: min-content;
-  grid-template-rows: 1fr 1fr 70px;
+  grid-template-rows: 1fr 1fr 61px;
   align-items: start;
+  height: 425px;
 
   &:last-child {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $tablet-width) {
     &:last-child:nth-child(2n+1) {
-      margin: 0 auto;
+      margin: 0 auto 32px;
     }
   }
 
   @media (min-width: $desktop-width) {
+    height: 430px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 88px;
+
+    &:nth-child(4) {
+      margin: 0 60px 88px auto;
+    }
+
     &:last-child:nth-child(2n+1) {
-      margin: 0;
+      margin: 0 auto 88px 60px;
     }
   }
 }
@@ -59,9 +81,9 @@
 
 .places__item:hover .places__ancor {
   display: inline-block;
-  z-index: 10000;
+  z-index: 2;
   color: $basic-lightest;
-  padding: 30px 23px;
+  padding: 30px 20px;
   margin: 0 auto;
   border: 1px solid $basic-lightest;
   box-sizing: border-box;
@@ -76,7 +98,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: calc(100% - 34px);
+    height: 100%;
     background-color: rgba($basic-darkest, 0.6);
     top: 0;
     left: 0;
@@ -112,6 +134,19 @@
   @media (min-width: $desktop-width) {
     @include font(55px, 80px, 600);
     max-width: 358px;
+    letter-spacing: -1px;
+    padding-bottom: 32px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 228px;
+      height: 4px;
+      background-color: $accent-primary;
+      bottom: 0;
+      left: 0;
+    }
   }
 }
 
@@ -125,29 +160,13 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 40px;
+    max-width: 350px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 350px;
+    padding-top: 32px;
     padding-bottom: 55px;
     text-align: left;
-  }
-}
-
-.places__list {
-  @include reset-list;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    column-gap: 0;
-    row-gap: 0;
   }
 }

@@ -34,8 +34,6 @@
   }
 }
 
-// closed menu
-
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
@@ -60,8 +58,6 @@
     flex-wrap: wrap;
   }
 }
-
-// opened menu
 
 .main-nav--opened.main-nav {
   position: absolute;
@@ -105,8 +101,6 @@
     width: 50px;
   }
 }
-
-// no JS
 
 .main-nav--nojs .main-nav__toggle {
   display: none;

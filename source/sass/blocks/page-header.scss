@@ -11,7 +11,7 @@
     justify-content: space-between;
     max-width: 1170px;
     margin: 0 auto;
-    padding: 36px 0 32px;
+    padding: 34px 0 34px;
   }
 }
 
@@ -19,4 +19,15 @@
   display: flex;
   align-items: center;
   padding-left: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
+}
+
+.page-header__logo-image {
+  @media (min-width: $desktop-width) {
+    width: 57px;
+    height: 22px;
+  }
 }

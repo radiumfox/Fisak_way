@@ -95,7 +95,7 @@ exports.createWebp = createWebp;
 const sprite = () => {
   return gulp.src("source/img/icons/*.svg")
     .pipe(svgSymbols({
-      templates: ['default-svg']
+      templates: ["default-svg"]
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img/icons"));
@@ -130,7 +130,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,

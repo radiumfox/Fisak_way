@@ -8,12 +8,19 @@
   flex-direction: column;
 }
 
-.form__control {
+.form__input {
   @include placeholder;
-  margin-bottom: 20px;
-  padding: 15px;
+  padding: 15px 15px 15px 26px;
   flex-shrink: 0;
   border: none;
   outline: 1px solid rgba($basic-dark, 0.3);
   box-sizing: border-box;
+
+  &--email {
+    padding-left: 15px;
+  }
+
+  &--invalid {
+    outline-color: $accent-primary;
+  }
 }

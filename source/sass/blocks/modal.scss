@@ -7,10 +7,12 @@
     background-color: $basic-light;
     width: 728px;
     background-image: url("../img/popup-bg.jpg");
+    background-size: contain;
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/popup-bg@2x.jpg");
+      background-size: contain;
     }
   }
 }
@@ -94,6 +96,26 @@
 }
 
 .modal__control {
+  position: relative;
+
+  &--phone {
+    position: relative;
+
+    &::before {
+      content: " *";
+      position: absolute;
+      color: $accent-primary;
+      line-height: 1;
+      width: 6px;
+      height: 6px;
+      top: 6px;
+      left: 14px;
+      z-index: 1;
+    }
+  }
+}
+
+.modal__input {
   margin-bottom: 19px;
 
   &:last-child {

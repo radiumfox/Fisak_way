@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Лендинг тура по Европе">
     <title>Путешествие по Европе</title>
+    <link rel="preload" type="font/woff2" href="../fonts/montserratregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="../fonts/montserratmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="../fonts/montserratsemibold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="../fonts/montserratbold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo" href="#">
+        <a class="page-header__logo">
           <img class="page-header__logo-image" src="img/logo.svg" width="44" height="17" alt="Логотип">
         </a>
-
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -220,7 +223,7 @@
                 <div class="info__reviews review">
                   <div class="review__image-box">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/reviews/review-albania-macedonia.webp 1x, img/reviews/review-macedonia-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/reviews/review-macedonia-desktop.webp 1x, img/reviews/review-macedonia-desktop@2x.webp 2x">
                       <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-macedonia-tablet.webp 1x, img/reviews/review-macedonia-tablet@2x.webp 2x">
                       <source type="image/webp" srcset="img/reviews/review-macedonia-mobile.webp 1x, img/reviews/review-macedonia-mobile@2x.webp 2x">
                       <source media="(min-width: 1024px)" srcset="img/reviews/review-macedonia-desktop.jpg 1x, img/reviews/review-macedonia-desktop@2x.jpg 2x">
@@ -252,7 +255,7 @@
                 <div class="info__reviews review">
                   <div class="review__image-box">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/reviews/review-albania-montenegro.webp 1x, img/reviews/review-montenegro-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/reviews/review-montenegro-desktop.webp 1x, img/reviews/review-montenegro-desktop@2x.webp 2x">
                       <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-montenegro-tablet.webp 1x, img/reviews/review-montenegro-tablet@2x.webp 2x">
                       <source type="image/webp" srcset="img/reviews/review-montenegro-mobile.webp 1x, img/reviews/review-montenegro-mobile@2x.webp 2x">
                       <source media="(min-width: 1024px)" srcset="img/reviews/review-montenegro-desktop.jpg 1x, img/reviews/review-montenegro-desktop@2x.jpg 2x">
@@ -284,7 +287,7 @@
                 <div class="info__reviews review">
                   <div class="review__image-box">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/reviews/review-albania-croatia.webp 1x, img/reviews/review-croatia-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/reviews/review-croatia-desktop.webp 1x, img/reviews/review-croatia-desktop@2x.webp 2x">
                       <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-croatia-tablet.webp 1x, img/reviews/review-croatia-tablet@2x.webp 2x">
                       <source type="image/webp" srcset="img/reviews/review-croatia-mobile.webp 1x, img/reviews/review-croatia-mobile@2x.webp 2x">
                       <source media="(min-width: 1024px)" srcset="img/reviews/review-croatia-desktop.jpg 1x, img/reviews/review-croatia-desktop@2x.jpg 2x">
@@ -319,7 +322,7 @@
               <p class="pricing__contacts-text">Свяжитесь с нами</p>
               <a class="pricing__contact pricing__contact--email" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
               <a class="pricing__contact pricing__contact--phone" href="tel:+749978468446">
-                <svg class="pricing__icon" width="17" height="24">
+                <svg class="pricing__icon" width="17" height="26">
                   <use xlink:href="img/icons/sprite.svg#phone-icon"></use>
                 </svg>
                 <span class="pricing__contacts-number">+7 (499) -784-684-46</span>
@@ -330,7 +333,7 @@
           <ul class="pricing__list">
             <li class="pricing__item">
               <div class="pricing__content">
-                <h3 class="pricing__title">Комплексный <span class="pricing__price">$1999</span></h3>
+                <h3 class="pricing__title">Комплексный<span class="pricing__price">$1999</span></h3>
                 <p class="pricing__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
                 <ul class="pricing__features-list">
                   <li class="pricing__feature">Разработанный маршрут с гидом группы</li>
@@ -344,7 +347,7 @@
 
             <li class="pricing__item">
               <div class="pricing__content">
-                <h3 class="pricing__title">Экономный <span class="pricing__price">$1399</span></h3>
+                <h3 class="pricing__title">Экономный<span class="pricing__price">$1399</span></h3>
                 <p class="pricing__text">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
                 <ul class="pricing__features-list">
                   <li class="pricing__feature">Разработанный маршрут с гидом группы</li>
@@ -365,12 +368,18 @@
           <h2 class="visually-hidden">Задать вопрос</h2>
           <p class="request__text">У Вас остались вопросы?</p>
           <p class="request__offer">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-          <form class="request__form form" method="POST" action="#">
+          <form class="request__form form" action="https://echo.htmlacademy.ru" method="post">
             <div class="request__form-wrapper form__wrapper">
-              <label class="visually-hidden">Номер телефона</label>
-              <input class="request__control form__control" type="number" placeholder="Введите 10 цифр номера">
-              <label class="visually-hidden">Email</label>
-              <input class="request__control form__control" type="email" placeholder="E-mail">
+              <div class="request__control request__control--phone">
+                <label class="visually-hidden" for="request-phone">Номер телефона</label>
+                <input class="request__input form__input" id="request-phone" type="text" minlength="10" placeholder="+7   Введите 10 цифр номера" required>
+                <p class="invalid-data"></p>
+              </div>
+              <div class="request__control request__control--email">
+                <label class="visually-hidden" for="request-email">Email</label>
+                <input class="request__input form__input form__input--email" id="request-email" type="email" placeholder="E-mail">
+                <p class="invalid-data"></p>
+              </div>
             </div>
             <button class="request__button button" type="submit">Отправить</button>
           </form>
@@ -380,12 +389,18 @@
       <section class="modal">
         <div class="modal__wrapper">
           <h2 class="modal__title">Купить тур</h2>
-          <form class="modal__form form" method="POST" action="#">
+          <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post">
             <div class="modal__form-wrapper form__wrapper">
-              <label class="visually-hidden" for="modal-phone">Номер телефона</label>
-              <input class="modal__control modal__control--phone form__control" id="modal-phone" type="number" name="phone-number" value="+7" placeholder="Введите 10 цифр номера">
-              <label class="visually-hidden" for="modal-email">Email</label>
-              <input class="modal__control modal__control--email form__control" id="modal-email" type="email" name="e-mail" placeholder="E-mail">
+              <div class="modal__control modal__control--phone">
+                <label class="visually-hidden" for="modal-phone">Номер телефона</label>
+                <input class="modal__input form__input" id="modal-phone" type="text" minlength="10" name="phone-number" placeholder="Введите 10 цифр номера">
+                <p class="invalid-data"></p>
+              </div>
+              <div class="modal__control modal__control--email">
+                <label class="visually-hidden" for="modal-email">Email</label>
+                <input class="modal__input form__input form__input--email" id="modal-email" type="email" name="e-mail" placeholder="E-mail">
+                <p class="invalid-data"></p>
+              </div>
             </div>
             <button class="modal__button button" type="submit">Отправить</button>
           </form>
@@ -433,13 +448,13 @@
         <div class="page-footer__contacts">
           <h2 class="page-footer__title page-footer__title--contacts">Наши контакты</h2>
           <a class="page-footer__contact" href="mailto:puteshestviemechta@gmail.ru">
-            <svg class="page-footer__icon" width="26" height="20">
+            <svg class="page-footer__icon" width="26" height="22">
               <use xlink:href="img/icons/sprite.svg#mail-icon"></use>
             </svg>
             <span class="page-footer__contact-text">puteshestviemechta@gmail.ru</span>
           </a>
           <a class="page-footer__contact page-footer__contact--phone" href="tel:+749978468446">
-            <svg class="page-footer__icon page-footer__icon--phone" width="17" height="24">
+            <svg class="page-footer__icon page-footer__icon--phone" width="17" height="26">
               <use xlink:href="img/icons/sprite.svg#phone-icon"></use>
             </svg>
             <span class="page-footer__contact-text">+7 (499) -784-684-46</span>
@@ -448,7 +463,7 @@
 
         <div class="page-footer__corporate">
           <h2 class="page-footer__title page-footer__title--cororate">Корпоративные путешествия</h2>
-          <p class="page-footer__text page-footer__text--lh-bigger">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
+          <p class="page-footer__text page-footer__text--corporate">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
         </div>
       </div>
     </footer>

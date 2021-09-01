@@ -6,16 +6,13 @@ const modalForm = modalWindow.querySelector(".modal__form");
 const modalPhone = modalWindow.querySelector(".modal__control--phone");
 const modalEmail = modalWindow.querySelector(".modal__control--email");
 
-// const successMessage = document.querySelector(".success");
-// const successCloseButton = successMessage.querySelector(".success__close");
-
 let isStorageSupport = true;
-let storage = "";
-
-// modal window
+let phoneStorage = "";
+let emailStorage = "";
 
 try {
-  storage = localStorage.getItem("name");
+  phoneStorage = localStorage.getItem("phoneNumber");
+  emailStorage = localStorage.getItem("email")
 } catch (err) {
   isStorageSupport = false;
 }
@@ -25,11 +22,17 @@ modalButtons.forEach(button => {
     evt.preventDefault();
     modalWindow.classList.add("modal--show");
 
-    if (storage) {
-      modalPhone.value = storage;
-      modalEmail.focus();
+    if(phoneStorage) {
+      inputModalPhone.value = phoneStorage;
+      inputModalEmail.focus();
+    } else if(emailStorage) {
+      inputModalEmail.value = emailStorage;
+      inputModalPhone.focus();
+    } else if (phoneStorage || emailStorage) {
+      inputModalPhone.value = phoneStorage;
+      inputModalEmail.value = emailStorage;
     } else {
-      modalPhone.focus();
+      inputModalPhone.focus();
     }
   })
 });
@@ -53,10 +56,3 @@ if (modalWindow.classList.contains("modal--show")) {
     modalWindow.classList.remove("modal--show");
   })
 };
-
-
-// const submitModalButton = document.querySelector(".modal__button");
-// submitModalButton.addEventListener("click", (evt)=> {
-//   evt.preventDefault();
-//   showSuccessMessage();
-// });

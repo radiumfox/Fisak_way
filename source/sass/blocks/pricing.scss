@@ -4,7 +4,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 20px;
-    margin-bottom: 110px;
+    margin-bottom: 112px;
   }
 
   @media (min-width: $desktop-width) {
@@ -18,7 +18,7 @@
 
 .pricing__info {
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
 
   @media (min-width: $desktop-width) {
     padding-bottom: 0;
@@ -40,7 +40,20 @@
 
   @media (min-width: $desktop-width) {
     @include font(55px, 90px, 600);
+    margin-top: 117px;
     margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 175px;
+      height: 3px;
+      background-color: $accent-primary;
+      bottom: 0;
+      left: 0;
+    }
   }
 }
 
@@ -51,11 +64,11 @@
   padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 30px;
+    padding-bottom: 34px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 60px;
+    padding-bottom: 56px;
   }
 }
 
@@ -67,6 +80,7 @@
 
   @media (min-width: $desktop-width) {
     @include font(22px, 34px, 500);
+    text-align: center;
   }
 }
 
@@ -89,11 +103,12 @@
 
   &--phone {
     @include font(18px, 32px, 400);
+  }
 
-    @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
+    &--phone {
       @include font(20px, 32px, 400);
       color: $basic-darkest;
-      // padding-left: 50px;
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -115,20 +130,26 @@
 }
 
 .pricing__item {
+  max-width: 288px;
+  margin: 0 auto;
+  background-color: $basic-lightest;
+
   @media (max-width: $mobile-width-only) {
-    &:first-child {
-      margin-bottom: 30px;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
   @media (min-width: $tablet-width) {
-    max-width: 288px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 370px;
     box-sizing: border-box;
-    padding: 40px 30px 30px;
+    padding: 40px 32px 30px;
     border: 1px solid rgba($basic-dark, 0.3);
     border-radius: 6px;
     display: flex;
@@ -140,20 +161,20 @@
 
     &:hover {
       border: 3px solid $accent-primary;
-      padding: 38px 28px 28px;
+      padding: 38px 30px 28px;
     }
   }
 }
 
 .pricing__button {
   text-align: center;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     max-width: initial;
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
     margin-top: auto;
   }
 }
@@ -191,8 +212,10 @@
   padding-bottom: 11px;
   display: flex;
   flex-direction: column;
+  letter-spacing: -1px;
 
   @media (min-width: $desktop-width) {
+    @include font(28px, 34px, 600);
     padding-bottom: 40px;
     flex-direction: row;
     justify-content: space-between;
@@ -201,11 +224,21 @@
 
 .pricing__item:hover .pricing__title {
   color: $accent-primary;
+  letter-spacing: 0;
 }
 
 .pricing__price {
   @include font(25px, 34px, 700);
   padding-top: 8px;
+  letter-spacing: 0;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.pricing__item:hover .pricing__price {
+  letter-spacing: 0;
 }
 
 .pricing__text {
@@ -226,6 +259,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 289px;
     padding-bottom: 28px;
     text-align: left;
   }
@@ -243,6 +277,16 @@
   }
 }
 
+.pricing__features-list {
+  @include reset-list;
+  padding-left: 26px;
+  padding-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+  }
+}
+
 .pricing__feature {
   @include font(16px, 32px, 400);
   list-style-image: url("../img/icons/tick.svg");
@@ -253,26 +297,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 15px;
+    padding-bottom: 14px;
 
     &:last-child {
-      padding-bottom: 54px;
+      padding-bottom: 36px;
     }
   }
 }
 
 .pricing__item:hover .pricing__feature {
   list-style-image: url("../img/icons/black-tick.svg");
-}
-
-.pricing__features-list {
-  @include reset-list;
-  padding-left: 26px;
-  padding-top: 20px;
-
-  @media (min-width: $desktop-width) {
-    padding-top: 30px;
-  }
 }
 
 .pricing__icon {
@@ -286,6 +320,6 @@
 
 .pricing__contacts-number {
   @media (min-width: $desktop-width) {
-    padding-left: 20px;
+    padding-left: 25px;
   }
 }

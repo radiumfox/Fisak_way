@@ -76,6 +76,8 @@
 
   @media (min-width: $desktop-width) {
     @include font(55px, 80px, 600);
+    text-align: left;
+    letter-spacing: -1px;
   }
 }
 
@@ -85,12 +87,18 @@
   padding: 20px 16px;
   margin: 0;
   text-align: center;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
 
   @media (min-width: $tablet-width) {
     @include font(16px, 27px, 400);
     color: $basic-lightest;
-    padding: 30px 0 39px;
+    padding: 15px 0 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 28px 0 36px;
+    max-width: 376px;
+    text-align: left;
   }
 }
 

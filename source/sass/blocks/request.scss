@@ -32,12 +32,14 @@
 
 .request__wrapper {
   padding: 50px 16px;
-  margin-bottom: 60px;
+  max-width: 350px;
+  margin: 0 auto 60px;
 
   @media (min-width: $tablet-width) {
     background-color: $basic-lightest;
     margin: 0 auto;
     width: 658px;
+    max-width: 658px;
     box-sizing: border-box;
     padding: 50px;
   }
@@ -53,6 +55,10 @@
   text-align: center;
   margin: 0;
   padding-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 15px;
+  }
 }
 
 .request__offer {
@@ -66,18 +72,40 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
 .request__control {
-  margin-bottom: 23px;
+  position: relative;
+  padding-bottom: 23px;
+  display: flex;
+  flex-direction: column;
 
-  @media (min-width: $tablet-width) {
-    width: 269px;
+  &--phone {
+    position: relative;
+
+    &::before {
+      content: "*";
+      position: absolute;
+      color: $accent-primary;
+      line-height: 1;
+      width: 6px;
+      height: 6px;
+      top: 10px;
+      left: 15px;
+      z-index: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 25px;
+    padding-bottom: 28px;
+  }
+}
+
+.request__input {
+  @media (min-width: $tablet-width) {
+    width: 269px;
   }
 }
 
