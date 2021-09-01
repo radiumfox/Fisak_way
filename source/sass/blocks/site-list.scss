@@ -1,77 +1,69 @@
 .site-list {
   @include reset-list;
-  padding-top: 134px;
-  box-sizing: border-box;
-  min-height: 568px;
+  min-height: 0;
   align-items: center;
 
-  @media (min-width: $desktop-width) {
-    padding-top: 0;
-    min-height: 0;
+  @media (max-width: $tablet-width-only) {
+    padding-top: 134px;
+    box-sizing: border-box;
+    min-height: 568px;
   }
 }
 
 .site-list__link {
-  @include font(20px, 28px, 600);
-  color: $secondary-dark;
+  @include font(14px, 17px, 500);
+  background-color: $basic-lightest;
   text-decoration: none;
+  background-image: none;
+  color: $basic-darkest;
+  padding: 0;
   display: block;
-  padding: 17px 16px;
-  margin-bottom: 30px;
-  background-color: $basic-light;
-  background-image: url("../img/icons/arrow-right.svg");
-  background-repeat: no-repeat;
-  background-position: 93%;
 
   &--phone {
+    @include font(18px, 32px, 400);
     text-decoration: underline;
     display: flex;
     align-items: center;
   }
 
-  @media (min-width: $desktop-width) {
-    @include font(14px, 17px, 500);
-    background-color: $basic-lightest;
-    background-image: none;
-    color: $basic-darkest;
-    margin-bottom: 0;
-    padding: 0;
-
-    &--phone {
-      @include font(18px, 32px, 400);
-    }
+  @media (max-width: $tablet-width-only) {
+    @include font(20px, 28px, 600);
+    color: $secondary-dark;
+    padding: 17px 16px;
+    margin-bottom: 30px;
+    background-color: $basic-light;
+    background-image: url("../img/icons/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 93%;
   }
 }
 
 .site-list__item {
+  display: inline-block;
+  padding-left: 40px;
+
   &--phone {
-    display: none;
+    padding-left: 80px;
   }
 
-  @media (min-width: $desktop-width) {
-    display: inline-block;
-    padding-left: 40px;
+  @media (max-width: $tablet-width-only) {
+    padding-left: 0;
+    display: block;
 
     &--phone {
-      padding-left: 80px;
+      display: none;
     }
   }
 }
 
 .site-list__phone-number {
-  @media (min-width: $desktop-width) {
-    padding-left: 16px;
-  }
+  padding-left: 16px;
 }
 
 .site-list__item:hover .site-list__link {
-  @media (min-width: $desktop-width) {
-    color: $accent-primary;
-  }
+  color: $accent-primary;
 }
 
 .site-list__item:hover .site-list__icon {
-  @media (min-width: $desktop-width) {
-    fill: $accent-primary;
-  }
+  fill: $accent-primary;
 }

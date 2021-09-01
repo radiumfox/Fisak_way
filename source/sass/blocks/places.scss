@@ -1,58 +1,42 @@
 .places__wrapper {
-  padding: 0 16px;
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1170px;
+  margin: 200px auto 35px;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $tablet-width-only) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0 76px;
     margin-bottom: 64px;
+    margin-top: 80px;
   }
 
-  @media (min-width: $desktop-width) {
-    display: block;
-    max-width: 1170px;
-    margin: 200px auto 35px;
-    padding: 0;
+  @media (max-width: $mobile-width-only) {
+    padding: 0 16px;
+    margin-bottom: 0;
   }
 }
 
 .places__list {
   @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
   }
 }
 
 .places__item {
-  margin-bottom: 35px;
   display: grid;
   grid-template-columns: min-content;
   grid-template-rows: 1fr 1fr 61px;
   align-items: start;
-  height: 425px;
+  height: 430px;
+  margin: 0 0 100px;
 
-  &:last-child {
-    margin-bottom: 40px;
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 40px;
-
-    &:last-child:nth-child(2n+1) {
-      margin: 0 auto 32px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    height: 430px;
-  }
-
-  @media (min-width: $desktop-width-bigger) {
+  @media (min-width: $desktop-width-large) {
     &:nth-child(4) {
       margin: 0 60px 88px auto;
     }
@@ -62,8 +46,25 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
-    margin: 0 0 100px;
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 36px;
+
+    &:last-child:nth-child(2n+1) {
+      margin: 0 auto 32px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 35px;
+    height: 425px;
+
+    &:last-child {
+      margin-bottom: 44px;
+    }
+
+    &:last-child:nth-child(2n+1) {
+      margin-bottom: 44px;
+    }
   }
 }
 
@@ -110,6 +111,12 @@
     top: 0;
     left: 0;
   }
+
+  @media (max-width: $tablet-width-only) {
+    &::before {
+      height: calc(100% - 5px);
+    }
+  }
 }
 
 .places__title {
@@ -125,56 +132,66 @@
 }
 
 .places__img {
-  @media (min-width: $desktop-width) {
-    width: 350px;
-    height: 430px;
+  width: 350px;
+  height: 430px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 288px;
+    height: 425px;
   }
 }
 
 .places__main-title {
-  @include font(24px, 36px, 600);
+  @include font(55px, 80px, 600);
+  max-width: 358px;
+  letter-spacing: -1px;
+  padding-bottom: 32px;
+  position: relative;
   margin: 0;
 
-  @media (min-width: $tablet-width) {
-    @include font(30px, 45px, 600);
+  &::before {
+    content: "";
+    position: absolute;
+    width: 228px;
+    height: 4px;
+    background-color: $accent-primary;
+    bottom: 0;
+    left: 0;
   }
 
-  @media (min-width: $desktop-width) {
-    @include font(55px, 80px, 600);
-    max-width: 358px;
-    letter-spacing: -1px;
-    padding-bottom: 32px;
-    position: relative;
+  @media (max-width: $tablet-width-only) {
+    @include font(30px, 45px, 600);
+    padding-bottom: 20px;
+    letter-spacing: 0;
 
     &::before {
-      content: "";
-      position: absolute;
-      width: 228px;
-      height: 4px;
-      background-color: $accent-primary;
-      bottom: 0;
-      left: 0;
+      width: 0;
     }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    @include font(24px, 36px, 600);
   }
 }
 
 .places__text {
   @include font(16px, 28px, 400);
-  margin: 0;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  max-width: 350px;
+  padding-top: 32px;
+  padding-bottom: 55px;
+  text-align: left;
   letter-spacing: -0.5px;
+  margin: 0;
 
-  @media (min-width: $tablet-width) {
-    padding-bottom: 40px;
+  @media (max-width: $tablet-width-only) {
+    padding-bottom: 38px;
+    padding-top: 0;
     max-width: 350px;
+    text-align: center;
   }
 
-  @media (min-width: $desktop-width) {
-    max-width: 350px;
-    padding-top: 32px;
-    padding-bottom: 55px;
-    text-align: left;
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 20px;
+    max-width: initial;
   }
 }

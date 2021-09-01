@@ -1,12 +1,12 @@
 @mixin placeholder {
   &::placeholder {
-    color: $basic-darkest;
-    font-family: "Montserrat", "Verdana", sans-serif;
     font-size: 14px;
     line-height: 17px;
+    color: $basic-darkest;
+    font-family: "Montserrat", "Verdana", sans-serif;
     opacity: 1;
 
-    @media (min-width: $tablet-width) {
+    @media (max-width: $mobile-width-only) {
       font-size: 14px;
       line-height: 17px;
     }

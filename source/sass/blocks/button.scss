@@ -1,16 +1,16 @@
 .button {
-  @include font(10px, 12px, 500);
+  @include font(12px, 15px, 700);
+  padding: 30px 40px;
+  width: 310px;
   text-transform: uppercase;
   color: $basic-lightest;
   text-decoration: none;
   background-color: $accent-primary;
-  box-sizing: border-box;
-  width: 288px;
   display: inline-block;
   border: none;
-  padding: 18px 40px;
   letter-spacing: 2px;
   cursor: pointer;
+  box-sizing: border-box;
 
   &:active,
   &:hover,
@@ -18,13 +18,13 @@
     background-color: $accent-hover;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $tablet-width-only) {
+    @include font(10px, 12px, 500);
     width: 250px;
+    padding: 18px 40px;
   }
 
-  @media (min-width: $desktop-width) {
-    @include font(12px, 15px, 700);
-    padding: 30px 40px;
-    max-width: 310px;
+  @media (max-width: $mobile-width-only) {
+    width: 288px;
   }
 }

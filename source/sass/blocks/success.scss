@@ -1,7 +1,8 @@
 .success {
-  width: 100%;
-  background-color: $basic-light;
+  left: calc(50% - 364px);
+  max-width: 728px;
   min-height: 444px;
+  background-color: $basic-light;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,10 +10,8 @@
   position: fixed;
   bottom: 25vh;
 
-  @media (min-width: $tablet-width) {
-    left: calc(50% - 364px);
-    max-width: 728px;
-    min-height: 444px;
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
   }
 }
 

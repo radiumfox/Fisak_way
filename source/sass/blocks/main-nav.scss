@@ -1,36 +1,35 @@
 .main-nav {
-  position: relative;
+  min-width: none;
 
-  @media (min-width: $desktop-width) {
-    position: static;
-    min-width: none;
+  @media (max-width: $tablet-width-only) {
+    position: relative;
   }
 }
 
 .main-nav__toggle {
-  width: 50px;
-  height: 50px;
-  background-color: $accent-primary;
-  border: none;
-  position: absolute;
-  right: 0;
-  top: -34px;
-  z-index: 2;
-  display: block;
-  cursor: pointer;
-  padding: 0;
+  display: none;
 
-  &:hover,
-  &:active {
-    background-color: $accent-hover;
-  }
-
-  @media (min-width: $tablet-width) {
+  @media (max-width: $tablet-width-only) {
     width: 72px;
+    height: 50px;
+    background-color: $accent-primary;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: -34px;
+    z-index: 2;
+    display: block;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover,
+    &:active {
+      background-color: $accent-hover;
+    }
   }
 
-  @media (min-width: $desktop-width) {
-    display: none;
+  @media (max-width: $mobile-width-only) {
+    width: 50px;
   }
 }
 
@@ -38,36 +37,35 @@
   content: "";
   position: absolute;
   top: 16px;
-  left: 14px;
+  left: 25px;
   width: 22px;
   height: 1px;
   background-color: $basic-lightest;
   box-shadow: 0 8px 0 0 $basic-lightest, 0 16px 0 0 $basic-lightest;
 
-  @media (min-width: $tablet-width) {
-    left: 25px;
+  @media (max-width: $mobile-width-only) {
+    left: 14px;
   }
 }
 
 .main-nav--closed .main-nav__list {
-  display: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-  @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  @media (max-width: $tablet-width-only) {
+    display: none;
   }
 }
 
 .main-nav--opened.main-nav {
-  position: absolute;
-  right: 0;
-  top: 0;
-  min-width: 320px;
   background-color: $basic-lightest;
 
-  @media (min-width: $desktop-width) {
-    position: static;
+  @media (max-width: $tablet-width-only) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 320px;
   }
 }
 
@@ -75,6 +73,7 @@
   background-color: $basic-lightest;
   top: 0;
   right: 0;
+  width: 50px;
 
   &::before,
   &::after {
@@ -95,10 +94,6 @@
 
   &::after {
     transform: rotate(-45deg);
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 50px;
   }
 }
 
