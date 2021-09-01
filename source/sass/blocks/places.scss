@@ -7,13 +7,13 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 76px;
-    margin-bottom: 53px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: $desktop-width) {
     display: block;
     max-width: 1170px;
-    margin: 200px auto 28px;
+    margin: 200px auto 35px;
     padding: 0;
   }
 }
@@ -29,7 +29,7 @@
 }
 
 .places__item {
-  margin-bottom: 31px;
+  margin-bottom: 35px;
   display: grid;
   grid-template-columns: min-content;
   grid-template-rows: 1fr 1fr 61px;
@@ -37,10 +37,12 @@
   height: 425px;
 
   &:last-child {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+
     &:last-child:nth-child(2n+1) {
       margin: 0 auto 32px;
     }
@@ -50,9 +52,7 @@
     height: 430px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin: 0 0 88px;
-
+  @media (min-width: $desktop-width-bigger) {
     &:nth-child(4) {
       margin: 0 60px 88px auto;
     }
@@ -60,6 +60,10 @@
     &:last-child:nth-child(2n+1) {
       margin: 0 auto 88px 60px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 100px;
   }
 }
 
@@ -71,7 +75,8 @@
   color: $basic-dark;
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  display: none;
+  display: inline-block;
+  opacity: 0;
 }
 
 .places__image-box {
@@ -79,8 +84,9 @@
   grid-row: 1 / 4;
 }
 
+.places__item:focus-within .places__ancor,
 .places__item:hover .places__ancor {
-  display: inline-block;
+  opacity: 1;
   z-index: 2;
   color: $basic-lightest;
   padding: 30px 20px;
@@ -91,6 +97,7 @@
   width: 266px;
 }
 
+.places__item:focus-within,
 .places__item:hover {
   position: relative;
 
@@ -114,6 +121,7 @@
   padding: 17px 0;
   text-align: center;
   margin: 0 auto;
+  letter-spacing: -0.5px;
 }
 
 .places__img {

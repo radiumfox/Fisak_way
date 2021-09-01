@@ -2,10 +2,6 @@
   position: relative;
   padding: 16px 0 16px;
 
-  @media (min-width: $tablet-width) {
-    padding-left: 21px;
-  }
-
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
@@ -21,6 +17,10 @@
   padding-left: 16px;
 
   @media (min-width: $tablet-width) {
+    padding-left: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
     padding-left: 0;
   }
 }

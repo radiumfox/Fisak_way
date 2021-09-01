@@ -92,7 +92,7 @@
 
   @media (min-width: $tablet-width) {
     width: 95px;
-    padding-right: 35px;
+    padding-right: 32px;
   }
 }
 
@@ -182,12 +182,16 @@
   display: flex;
   align-items: center;
 
+  &--phone {
+    @include font(16px, 32px, 400);
+    text-decoration: underline;
+    padding-bottom: 0;
+  }
+
   @media (min-width: $tablet-width) {
     &--phone {
-      @include font(16px, 32px, 400);
-      text-decoration: underline;
-      padding-bottom: 0;
       align-items: flex-start;
+      padding-left: 10px;
     }
   }
 

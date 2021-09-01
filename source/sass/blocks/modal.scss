@@ -37,6 +37,7 @@
   position: relative;
   min-height: 568px;
   box-sizing: border-box;
+  padding: 0 16px;
 
   @media (min-width: $tablet-width) {
     padding: 72px 60px 89px;
@@ -97,6 +98,8 @@
 
 .modal__control {
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   &--phone {
     position: relative;

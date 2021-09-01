@@ -12,7 +12,9 @@
   letter-spacing: 2px;
   cursor: pointer;
 
-  &:active {
+  &:active,
+  &:hover,
+  &:focus {
     background-color: $accent-hover;
   }
 
@@ -24,9 +26,5 @@
     @include font(12px, 15px, 700);
     padding: 30px 40px;
     max-width: 310px;
-
-    &:hover {
-      background-color: $accent-hover;
-    }
   }
 }

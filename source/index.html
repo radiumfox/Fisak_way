@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -372,12 +372,12 @@
             <div class="request__form-wrapper form__wrapper">
               <div class="request__control request__control--phone">
                 <label class="visually-hidden" for="request-phone">Номер телефона</label>
-                <input class="request__input form__input" id="request-phone" type="text" minlength="10" placeholder="+7   Введите 10 цифр номера" required>
+                <input class="request__input form__input" id="request-phone" type="text" name="request-phone" maxlength="10" placeholder="+7  Введите 10 цифр номера">
                 <p class="invalid-data"></p>
               </div>
               <div class="request__control request__control--email">
                 <label class="visually-hidden" for="request-email">Email</label>
-                <input class="request__input form__input form__input--email" id="request-email" type="email" placeholder="E-mail">
+                <input class="request__input form__input form__input--email" id="request-email" type="email" name="request-email" placeholder="E-mail">
                 <p class="invalid-data"></p>
               </div>
             </div>
@@ -393,12 +393,12 @@
             <div class="modal__form-wrapper form__wrapper">
               <div class="modal__control modal__control--phone">
                 <label class="visually-hidden" for="modal-phone">Номер телефона</label>
-                <input class="modal__input form__input" id="modal-phone" type="text" minlength="10" name="phone-number" placeholder="Введите 10 цифр номера">
+                <input class="modal__input form__input" id="modal-phone" type="text" maxlength="10" name="modal-phone" placeholder="+7  Введите 10 цифр номера">
                 <p class="invalid-data"></p>
               </div>
               <div class="modal__control modal__control--email">
                 <label class="visually-hidden" for="modal-email">Email</label>
-                <input class="modal__input form__input form__input--email" id="modal-email" type="email" name="e-mail" placeholder="E-mail">
+                <input class="modal__input form__input form__input--email" id="modal-email" type="email" name="modal-email" placeholder="E-mail">
                 <p class="invalid-data"></p>
               </div>
             </div>
@@ -467,7 +467,6 @@
         </div>
       </div>
     </footer>
-
 
     <script src="js/main.min.js"></script>
 

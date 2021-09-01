@@ -54,6 +54,7 @@ const onRequestEmailInput = () => {
 
 const onModalPhoneInput = () => {
   if(inputModalPhone.value){
+    labelModalPhone.classList.add("visually-hidden");
     if (phoneRegExp.test(inputModalPhone.value)){
       modalPhoneMessage.textContent = "";
       modalPhoneMessage.classList.remove("invalid-data--show");

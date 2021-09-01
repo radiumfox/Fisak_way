@@ -21,7 +21,7 @@
     background-size: contain;
     background-color: inherit;
     max-width: 1170px;
-    margin: 0 auto 160px;
+    margin: 0 auto 154px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/request-bg-desktop@2x.jpg");
@@ -56,6 +56,10 @@
   margin: 0;
   padding-bottom: 20px;
 
+  @media (min-width: $tablet-width) {
+    padding-bottom: 14px;
+  }
+
   @media (min-width: $desktop-width) {
     padding-bottom: 15px;
   }
@@ -66,6 +70,10 @@
   text-align: center;
   padding-bottom: 20px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 23px;
+  }
 }
 
 .request__form-wrapper {

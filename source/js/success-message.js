@@ -59,8 +59,7 @@ modalForm.addEventListener("submit", (evt) => {
   if (isStorageSupport) {
     if(inputModalPhone.value) {
       localStorage.setItem("phoneNumber", inputModalPhone.value);
-    }
-    if(inputModalEmail.value) {
+    } else if(inputModalEmail.value) {
       localStorage.setItem("email", inputModalEmail.value);
     }
   };
