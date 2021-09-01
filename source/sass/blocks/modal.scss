@@ -1,32 +1,35 @@
 .modal {
   display: none;
-  background-color: $basic-lightest;
-  width: 100vw;
+  background-color: $basic-light;
+  width: 728px;
+  background-image: url("../img/popup-bg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 
-  @media (min-width: $tablet-width) {
-    background-color: $basic-light;
-    width: 728px;
-    background-image: url("../img/popup-bg.jpg");
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/popup-bg@2x.jpg");
     background-size: contain;
-    background-repeat: no-repeat;
+  }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/popup-bg@2x.jpg");
-      background-size: contain;
-    }
+  @media (max-width: $mobile-width-only) {
+    background-image: none;
+    background-color: $basic-lightest;
+    width: 100vw;
   }
 }
 
 .modal--show {
+  width: 728px;
+  margin: 0 auto;
+  left: calc(50% - 364px);
   display: block;
   position: fixed;
   bottom: 25vh;
   box-shadow: 0 1px 30px $shadow-primary;
 
-  @media (min-width: $tablet-width) {
-    width: 728px;
-    margin: 0 auto;
-    left: calc(50% - 364px);
+  @media (max-width: $mobile-width-only) {
+    width: 320px;
+    left: calc(50% - 160px);
   }
 }
 
@@ -35,16 +38,14 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  min-height: 568px;
+  padding: 72px 60px 89px;
   box-sizing: border-box;
-  padding: 0 16px;
+  max-width: 390px;
+  margin-left: auto;
 
-  @media (min-width: $tablet-width) {
-    padding: 72px 60px 89px;
-    box-sizing: border-box;
-    max-width: 390px;
-    margin-left: auto;
-    min-height: auto;
+  @media (max-width: $mobile-width-only) {
+    min-height: 568px;
+    padding: 0 16px;
   }
 }
 
@@ -56,10 +57,13 @@
 }
 
 .modal__button {
-  @media (min-width: $desktop-width) {
-    padding: 18px 0 17px;
-    max-width: 176px;
-    margin: 0 auto;
+  padding: 18px 0 17px;
+  max-width: 176px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width-only) {
+    margin: 0;
+    max-width: initial;
   }
 }
 

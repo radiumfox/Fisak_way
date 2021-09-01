@@ -1,14 +1,24 @@
 .request {
-  background-color: $basic-light;
+  background-image: url("../img/request-bg-desktop.jpg");
+  background-size: contain;
+  background-color: inherit;
+  max-width: 1170px;
+  margin: 0 auto 154px;
+  min-height: 455px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
 
-  @media (min-width: $tablet-width) {
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/request-bg-desktop@2x.jpg");
+    background-size: contain;
+  }
+
+  @media (max-width: $tablet-width-only) {
     background-image: url("../img/request-bg-tablet.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
-    min-height: 455px;
-    display: flex;
-    align-items: center;
     margin-bottom: 80px;
+    background-color: $basic-light;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/request-bg-tablet@2x.jpg");
@@ -16,37 +26,32 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/request-bg-desktop.jpg");
-    background-size: contain;
-    background-color: inherit;
-    max-width: 1170px;
-    margin: 0 auto 154px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/request-bg-desktop@2x.jpg");
-      background-size: contain;
-    }
+  @media (max-width: $mobile-width-only) {
+    min-height: 415px;
+    background-image: none;
+    margin-bottom: 62px;
   }
 }
 
 .request__wrapper {
-  padding: 50px 16px;
-  max-width: 350px;
-  margin: 0 auto 60px;
+  margin: 0 0 0 auto;
+  box-shadow: 0 4px 30px $shadow-primary;
+  background-color: $basic-lightest;
+  padding: 50px;
+  box-sizing: border-box;
+  width: 658px;
+  max-width: 658px;
 
-  @media (min-width: $tablet-width) {
-    background-color: $basic-lightest;
+  @media (max-width: $tablet-width-only) {
+    box-shadow: none;
     margin: 0 auto;
-    width: 658px;
-    max-width: 658px;
-    box-sizing: border-box;
-    padding: 50px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin: 0 0 0 auto;
-    box-shadow: 0 4px 30px $shadow-primary;
+  @media (max-width: $mobile-width-only) {
+    background-color: inherit;
+    padding: 50px 16px;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
 
@@ -54,41 +59,44 @@
   @include font(25px, 32px, 600);
   text-align: center;
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $tablet-width-only) {
     padding-bottom: 14px;
   }
 
-  @media (min-width: $desktop-width) {
-    padding-bottom: 15px;
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 20px;
   }
 }
 
 .request__offer {
   @include font(16px, 24px, 400);
   text-align: center;
-  padding-bottom: 20px;
   margin: 0;
+  padding-bottom: 23px;
 
-  @media (min-width: $tablet-width) {
-    padding-bottom: 23px;
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 20px;
   }
 }
 
 .request__form-wrapper {
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
   }
 }
 
 .request__control {
   position: relative;
-  padding-bottom: 23px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 28px;
 
   &--phone {
     position: relative;
@@ -106,22 +114,29 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
-    padding-bottom: 28px;
+  @media (max-width: $tablet-width-only) {
+    padding-bottom: 23px;
   }
 }
 
 .request__input {
-  @media (min-width: $tablet-width) {
-    width: 269px;
+  width: 269px;
+
+  @media (max-width: $mobile-width-only) {
+    width: initial;
   }
 }
 
 .request__button {
+  width: 176px;
   margin: 0 auto;
+  padding: 18px 0;
 
-  @media (min-width: $desktop-width) {
-    width: 176px;
-    padding: 18px 0;
+  @media (max-width: $tablet-width-only) {
+    width: 250px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 288px;
   }
 }
