@@ -1,6 +1,6 @@
 .success {
   left: calc(50% - 364px);
-  max-width: 728px;
+  min-width: 728px;
   min-height: 444px;
   background-color: $basic-light;
   display: flex;
@@ -11,7 +11,8 @@
   bottom: 25vh;
 
   @media (max-width: $mobile-width-only) {
-    width: 100%;
+    min-width: 100vw;
+    left: 0;
   }
 }
 
