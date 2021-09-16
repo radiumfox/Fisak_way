@@ -54,4 +54,9 @@
   &::after {
     transform: rotate(-45deg);
   }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: rgba($secondary-dark, 0.5);
+  }
 }

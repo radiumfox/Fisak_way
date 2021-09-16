@@ -4,7 +4,7 @@
   grid-template-rows: auto;
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0 0 74px;
+  padding: 0 20px 74px;
 
   @media (max-width: $tablet-width-only) {
     grid-template-columns: 1fr 332px;
@@ -187,6 +187,10 @@
   align-items: center;
   text-decoration: underline;
 
+  &:hover {
+    color: rgba($accent-primary, 0.7);
+  }
+
   &--phone {
     @include font(16px, 32px, 400);
     padding-bottom: 0;
@@ -239,6 +243,8 @@
 }
 
 .page-footer__icon {
+  fill: $special-grey-2;
+
   &--phone {
     fill: $special-grey-2;
   }

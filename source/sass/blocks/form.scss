@@ -23,4 +23,8 @@
   &--invalid {
     outline-color: $accent-primary;
   }
+
+  &:hover {
+    outline-color: rgba($basic-dark, 0.6);
+  }
 }
